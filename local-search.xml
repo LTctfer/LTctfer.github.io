@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2023/09/16/buuctf%20crypto%20%E3%80%90rot%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/09/16/buuctf%20crypto%20%E3%80%90rot%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h3 id="buuctf-crypto-【rot】解题记录"><a href="#buuctf-crypto-【rot】解题记录" class="headerlink" title="buuctf crypto 【rot】解题记录"></a>buuctf crypto 【rot】解题记录</h3><p>1.打开文件，看到密文</p><p><img src="/images/image-20230916093350576.png" alt="image-20230916093350576"></p><p>2.rot常见的位移数是13，直接ASCII码减去13运行一下</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python">a = [<span class="hljs-number">83</span>,<span class="hljs-number">89</span>,<span class="hljs-number">78</span>,<span class="hljs-number">84</span>,<span class="hljs-number">45</span>,<span class="hljs-number">86</span>,<span class="hljs-number">96</span>,<span class="hljs-number">45</span>,<span class="hljs-number">115</span>,<span class="hljs-number">121</span>,<span class="hljs-number">110</span>,<span class="hljs-number">116</span>,<span class="hljs-number">136</span>,<span class="hljs-number">132</span>,<span class="hljs-number">132</span>,<span class="hljs-number">132</span>,<span class="hljs-number">108</span>,<span class="hljs-number">128</span>,<span class="hljs-number">117</span>,<span class="hljs-number">118</span>,<span class="hljs-number">134</span>,<span class="hljs-number">110</span>,<span class="hljs-number">123</span>,<span class="hljs-number">111</span>,<span class="hljs-number">110</span>,<span class="hljs-number">127</span>,<span class="hljs-number">108</span>,<span class="hljs-number">112</span>,<span class="hljs-number">124</span>,<span class="hljs-number">122</span>,<span class="hljs-number">108</span>,<span class="hljs-number">118</span>,<span class="hljs-number">128</span>,<span class="hljs-number">108</span>,<span class="hljs-number">131</span>,<span class="hljs-number">114</span>,<span class="hljs-number">127</span>,<span class="hljs-number">134</span>,<span class="hljs-number">108</span>,<span class="hljs-number">116</span>,<span class="hljs-number">124</span>,<span class="hljs-number">124</span>,<span class="hljs-number">113</span>,<span class="hljs-number">108</span>,<span class="hljs-number">76</span>,<span class="hljs-number">76</span>,<span class="hljs-number">76</span>,<span class="hljs-number">76</span>,<span class="hljs-number">138</span>,<span class="hljs-number">23</span>,<span class="hljs-number">90</span>,<span class="hljs-number">81</span>,<span class="hljs-number">66</span>,<span class="hljs-number">71</span>,<span class="hljs-number">64</span>,<span class="hljs-number">69</span>,<span class="hljs-number">114</span>,<span class="hljs-number">65</span>,<span class="hljs-number">112</span>,<span class="hljs-number">64</span>,<span class="hljs-number">66</span>,<span class="hljs-number">63</span>,<span class="hljs-number">69</span>,<span class="hljs-number">61</span>,<span class="hljs-number">70</span>,<span class="hljs-number">114</span>,<span class="hljs-number">62</span>,<span class="hljs-number">66</span>,<span class="hljs-number">61</span>,<span class="hljs-number">62</span>,<span class="hljs-number">69</span>,<span class="hljs-number">67</span>,<span class="hljs-number">70</span>,<span class="hljs-number">63</span>,<span class="hljs-number">61</span>,<span class="hljs-number">110</span>,<span class="hljs-number">110</span>,<span class="hljs-number">112</span>,<span class="hljs-number">64</span>,<span class="hljs-number">68</span>,<span class="hljs-number">62</span>,<span class="hljs-number">70</span>,<span class="hljs-number">61</span>,<span class="hljs-number">112</span>,<span class="hljs-number">111</span>,<span class="hljs-number">112</span>]<br>b = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:<br>    i = i-<span class="hljs-number">13</span><br>    b.append(i)<br><br><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> b:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">chr</span>(j),end=<span class="hljs-string">&#x27;&#x27;</span>)<br><br><br></code></pre></td></tr></table></figure><p>3.运行一下</p><p><img src="/images/image-20230916093656435.png" alt="image-20230916093656435"></p><p>4.需要爆破得到后面4位，写个脚本</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> hashlib<br>demo=<span class="hljs-string">&#x27;flag&#123;www_shiyanbar_com_is_very_good_&#x27;</span><br>check = <span class="hljs-string">&#x27;38e4c352809e150186920aac37190cbc&#x27;</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">32</span>,<span class="hljs-number">126</span>):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">32</span>,<span class="hljs-number">126</span>):<br>        <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">32</span>,<span class="hljs-number">126</span>):<br>            <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">32</span>,<span class="hljs-number">126</span>):<br>                tmp = demo + <span class="hljs-built_in">chr</span>(i) + <span class="hljs-built_in">chr</span>(j) + <span class="hljs-built_in">chr</span>(k) + <span class="hljs-built_in">chr</span>(m) + <span class="hljs-string">&#x27;&#125;&#x27;</span><br>                <span class="hljs-built_in">hash</span> = hashlib.md5(tmp.encode(<span class="hljs-string">&#x27;utf8&#x27;</span>)).hexdigest()<br>                <span class="hljs-keyword">if</span> check == <span class="hljs-built_in">hash</span>:<br>                    <span class="hljs-built_in">print</span>(tmp)<br>                    exit()<br></code></pre></td></tr></table></figure><p>5.运行得到结果（时间应该不短捏）</p><p><img src="/images/image-20230916094040284.png" alt="image-20230916094040284"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BMRCTF2020%5D%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E7%9F%A5%E5%A4%9A%E5%B0%91%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/09/15/buuctf%20crypto%20%E3%80%90%5BMRCTF2020%5D%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E7%9F%A5%E5%A4%9A%E5%B0%91%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h3 id="buuctf-crypto-【-MRCTF2020-古典密码知多少】解题记录"><a href="#buuctf-crypto-【-MRCTF2020-古典密码知多少】解题记录" class="headerlink" title="buuctf crypto 【[MRCTF2020]古典密码知多少】解题记录"></a>buuctf crypto 【[MRCTF2020]古典密码知多少】解题记录</h3><p>1.打开文件，一张图片</p><p><img src="/images/image-20230915100003897.png" alt="image-20230915100003897"></p><p>2.查了别人的wp（<a href="https://blog.csdn.net/ao52426055/article/details/109304646%EF%BC%89%EF%BC%8C%E5%BA%94%E8%AF%A5%E6%98%AF%E6%A0%87%E5%87%86%E9%93%B6%E6%B2%B3%E5%AD%97%E6%AF%8D+%E5%9C%A3%E5%A0%82%E6%AD%A6%E5%A3%AB%E5%AF%86%E7%A0%81+%E7%8C%AA%E5%9C%88%E5%AF%86%E7%A0%81%EF%BC%8C%E5%AF%B9%E7%85%A7%E8%A7%A3%E5%87%BA%E4%B8%BA%EF%BC%9AFGCPFLIRTUASYON">https://blog.csdn.net/ao52426055/article/details/109304646），应该是标准银河字母+圣堂武士密码+猪圈密码，对照解出为：FGCPFLIRTUASYON</a></p><p>3.栅栏解密一下即可</p><p><img src="/images/image-20230915100430204.png" alt="image-20230915100430204"></p><p>4.flag为{CRYPTOFUN}</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BWUSTCTF2020%5D%E4%BD%9B%E8%AF%B4%EF%BC%9A%E5%8F%AA%E8%83%BD%E5%9B%9B%E5%A4%A9%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/09/15/buuctf%20crypto%20%E3%80%90%5BWUSTCTF2020%5D%E4%BD%9B%E8%AF%B4%EF%BC%9A%E5%8F%AA%E8%83%BD%E5%9B%9B%E5%A4%A9%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h3 id="buuctf-crypto-【-WUSTCTF2020-佛说：只能四天】解题记录"><a href="#buuctf-crypto-【-WUSTCTF2020-佛说：只能四天】解题记录" class="headerlink" title="buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录"></a>buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录</h3><p>1.打开文件</p><p><img src="/images/image-20230915093151040.png" alt="image-20230915093151040"></p><p>2.根据描述，先用新约佛论解密（<a href="http://hi.pcmoe.net/buddha.html%EF%BC%89">http://hi.pcmoe.net/buddha.html）</a></p><p><img src="/images/image-20230915093428986.png" alt="image-20230915093428986"></p><p>3.感觉跟核心价值观有关系，试着解密一下（<a href="http://www.hiencode.com/cvencode.html%EF%BC%89">http://www.hiencode.com/cvencode.html）</a></p><p><img src="/images/image-20230915093640179.png" alt="image-20230915093640179"></p><p>4.根据提示，栅栏密码尝试解密，栏数为4时，看到另一个提示</p><p><img src="/images/image-20230915094323822.png" alt="image-20230915094323822"></p><p>5.凯撒密码（位移数为3时叫做凯撒）解密一下</p><p><img src="/images/image-20230915094609885.png" alt="image-20230915094609885"></p><p>6.提示说凯撒不是最后一步，猜测是base，尝试一下（<a href="https://www.qqxiuzi.cn/bianma/base.php%EF%BC%89">https://www.qqxiuzi.cn/bianma/base.php）</a></p><p><img src="/images/image-20230915094831209.png" alt="image-20230915094831209"></p><p>7.得到flag</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2023/09/14/%E8%87%AA%E5%B7%B1%E8%AF%95%E8%AF%95%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E6%8D%8F/"/>
+    <url>/2023/09/14/%E8%87%AA%E5%B7%B1%E8%AF%95%E8%AF%95%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E6%8D%8F/</url>
+    
+    <content type="html"><![CDATA[<p>自己试试怎么显示图片捏</p><p><img src="/images/image-20230914115421460.png" alt="image-20230914115421460"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2023/09/14/hello-world/"/>
+    <url>/2023/09/14/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2023/09/14/hello-wasdasjdjalsd/"/>
+    <url>/2023/09/14/hello-wasdasjdjalsd/</url>
+    
+    <content type="html"><![CDATA[<p>hello</p><p>world</p><p><img src="/images/image-20230914110733032.png" alt="image-20230914110733032"><img src="C:\Users\LEGION\AppData\Roaming\Typora\typora-user-images\image-20230914110733723.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
