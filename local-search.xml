@@ -5,6 +5,19 @@
   
   <entry>
     <title></title>
+    <link href="/2023/09/16/buuctf%20crypto%20%E3%80%90%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/09/16/buuctf%20crypto%20%E3%80%90%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<p>buuctf crypto 【这是什么】解题记录</p><p>1.文件后缀名修改为txt并打开</p><p><img src="/images/image-20230916124347577.png" alt="image-20230916124347577"></p><p>2.JSfuck编码，解码一下（<a href="https://www.bugku.com/tools/jsfuck/#%EF%BC%89">https://www.bugku.com/tools/jsfuck/#）</a></p><p><img src="/images/image-20230916124734253.png" alt="image-20230916124734253"></p><p>3.得到flag</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
     <link href="/2023/09/16/buuctf%20crypto%20%E3%80%90rot%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     <url>/2023/09/16/buuctf%20crypto%20%E3%80%90rot%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     
