@@ -5,6 +5,19 @@
   
   <entry>
     <title></title>
+    <link href="/2023/09/17/title%EF%BC%9Abuuctf%20crypto%20%E3%80%90%5BHDCTF2019%5Dbbbbbbrsa%E3%80%91/"/>
+    <url>/2023/09/17/title%EF%BC%9Abuuctf%20crypto%20%E3%80%90%5BHDCTF2019%5Dbbbbbbrsa%E3%80%91/</url>
+    
+    <content type="html"><![CDATA[<p>title：buuctf crypto 【[HDCTF2019]bbbbbbrsa】</p><p>1.打开文件</p><p><img src="/images/image-20230917202323941.png" alt="image-20230917202323941"></p><p><img src="/images/image-20230917202422905.png" alt="image-20230917202422905"></p><p>2.注意一下，base32其实不是真的base32编码，只是一个名字，其实是base64编码，还有c是倒序的，写个脚本跑一下</p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> Crypto.Util.number import *<br>import gmpy2<br><span class="hljs-attribute">p</span>=177077389675257695042507998165006460849<br><span class="hljs-attribute">n</span>=37421829509887796274897162249367329400988647145613325367337968063341372726061<br><span class="hljs-attribute">q</span>=n//p<br><span class="hljs-attribute">c</span>=2373740699529364991763589324200093466206785561836101840381622237225512234632<br>phi=(q-1)*(p-1)<br><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> range(50000,70000):<br>    <span class="hljs-keyword">if</span> gmpy2.gcd(e,phi)==1:<br>        <span class="hljs-attribute">d</span>=gmpy2.invert(e,phi)<br>        <span class="hljs-attribute">m</span>=pow(c,d,n)<br>        <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;flag&#x27;</span> <span class="hljs-keyword">in</span> str(long_to_bytes(m)):<br>            <span class="hljs-built_in">print</span>(str(long_to_bytes(m))[2:-1])<br></code></pre></td></tr></table></figure><p>3.运行看看结果</p><p><img src="/images/image-20230917203727593.png" alt="image-20230917203727593"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
     <link href="/2023/09/16/buuctf%20crypto%20%E3%80%90%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     <url>/2023/09/16/buuctf%20crypto%20%E3%80%90%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     
