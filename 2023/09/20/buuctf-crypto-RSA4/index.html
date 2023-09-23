@@ -16,27 +16,26 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="buuctf crypto 【[HDCTF2019]bbbbbbrsa】 1.打开文件   2.注意一下，base32其实不是真的base32编码，只是一个名字，其实是base64编码，还有c是倒序的，写个脚本跑一下 12345678910111213from Crypto.Util.number import *import gmpy2p&#x3D;1770773896752576950425079981">
+    <meta name="description" content="1.打开文件，看到三组n和c  2.中国剩余定理，直接写脚本就行 1234567891011121314151617181920212223242526import gmpy2import  binascii#利用中国剩余定理求解同余方程，aList：余数，mList：模数def CRT(aList, mList):    M &#x3D; 1    for i in mList:        M &#x3D; M">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2023/09/17/title%EF%BC%9Abuuctf%20crypto%20%E3%80%90[HDCTF2019]bbbbbbrsa%E3%80%91/index.html">
+<meta property="og:title" content="buuctf crypto RSA4">
+<meta property="og:url" content="http://example.com/2023/09/20/buuctf-crypto-RSA4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="buuctf crypto 【[HDCTF2019]bbbbbbrsa】 1.打开文件   2.注意一下，base32其实不是真的base32编码，只是一个名字，其实是base64编码，还有c是倒序的，写个脚本跑一下 12345678910111213from Crypto.Util.number import *import gmpy2p&#x3D;1770773896752576950425079981">
+<meta property="og:description" content="1.打开文件，看到三组n和c  2.中国剩余定理，直接写脚本就行 1234567891011121314151617181920212223242526import gmpy2import  binascii#利用中国剩余定理求解同余方程，aList：余数，mList：模数def CRT(aList, mList):    M &#x3D; 1    for i in mList:        M &#x3D; M">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/image-20230917202323941.png">
-<meta property="og:image" content="http://example.com/images/image-20230917202422905.png">
-<meta property="og:image" content="http://example.com/images/image-20230917203727593.png">
-<meta property="article:published_time" content="2023-09-17T13:46:25.802Z">
-<meta property="article:modified_time" content="2023-09-17T13:51:45.505Z">
+<meta property="og:image" content="http://example.com/images/image-20230920200250968.png">
+<meta property="og:image" content="http://example.com/images/image-20230920200558251.png">
+<meta property="article:published_time" content="2023-09-20T12:01:42.000Z">
+<meta property="article:modified_time" content="2023-09-20T12:06:07.128Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/image-20230917202323941.png">
+<meta name="twitter:image" content="http://example.com/images/image-20230920200250968.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hexo</title>
+  <title>buuctf crypto RSA4 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -231,7 +230,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="buuctf crypto RSA4"></span>
           
         </div>
 
@@ -242,8 +241,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-17 21:46" pubdate>
-          2023年9月17日 晚上
+        <time datetime="2023-09-20 20:01" pubdate>
+          2023年9月20日 晚上
         </time>
       </span>
     
@@ -254,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          542 字
+          3.4k 字
         
       </span>
     
@@ -265,7 +264,7 @@
         
         
         
-          5 分钟
+          29 分钟
         
       </span>
     
@@ -310,20 +309,31 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">buuctf crypto RSA4</h1>
             
             
               <div class="markdown-body">
                 
-                <p>buuctf crypto 【[HDCTF2019]bbbbbbrsa】</p>
-<p>1.打开文件</p>
-<p><img src="/images/image-20230917202323941.png" srcset="/img/loading.gif" lazyload alt="image-20230917202323941"></p>
-<p><img src="/images/image-20230917202422905.png" srcset="/img/loading.gif" lazyload alt="image-20230917202422905"></p>
-<p>2.注意一下，base32其实不是真的base32编码，只是一个名字，其实是base64编码，还有c是倒序的，写个脚本跑一下</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-keyword">from</span> Crypto.Util.number import *<br>import gmpy2<br><span class="hljs-attribute">p</span>=177077389675257695042507998165006460849<br><span class="hljs-attribute">n</span>=37421829509887796274897162249367329400988647145613325367337968063341372726061<br><span class="hljs-attribute">q</span>=n//p<br><span class="hljs-attribute">c</span>=2373740699529364991763589324200093466206785561836101840381622237225512234632<br>phi=(q-1)*(p-1)<br><span class="hljs-keyword">for</span> e <span class="hljs-keyword">in</span> range(50000,70000):<br>    <span class="hljs-keyword">if</span> gmpy2.gcd(e,phi)==1:<br>        <span class="hljs-attribute">d</span>=gmpy2.invert(e,phi)<br>        <span class="hljs-attribute">m</span>=pow(c,d,n)<br>        <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;flag&#x27;</span> <span class="hljs-keyword">in</span> str(long_to_bytes(m)):<br>            <span class="hljs-built_in">print</span>(str(long_to_bytes(m))[2:-1])<br></code></pre></td></tr></table></figure>
+                <p>1.打开文件，看到三组n和c</p>
+<p><img src="/images/image-20230920200250968.png" srcset="/img/loading.gif" lazyload alt="image-20230920200250968"></p>
+<p>2.中国剩余定理，直接写脚本就行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> gmpy2<br><span class="hljs-keyword">import</span>  binascii<br><br><span class="hljs-comment">#利用中国剩余定理求解同余方程，aList：余数，mList：模数</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">CRT</span>(<span class="hljs-params">aList, mList</span>):<br>    M = <span class="hljs-number">1</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> mList:<br>        M = M * i   <span class="hljs-comment">#计算M = ∏ mi</span><br>    <span class="hljs-comment">#print(M)</span><br>    x = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(mList)):<br>        Mi = M // mList[i]   <span class="hljs-comment">#计算Mi</span><br>        Mi_inverse = gmpy2.invert(Mi, mList[i]) <span class="hljs-comment">#计算Mi的逆元</span><br>        x += aList[i] * Mi * Mi_inverse <span class="hljs-comment">#构造x各项</span><br>    x = x % M<br>    <span class="hljs-keyword">return</span> x<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    <span class="hljs-comment">#========== n c ==========</span><br>    n1 = <span class="hljs-string">&quot;331310324212000030020214312244232222400142410423413104441140203003243002104333214202031202212403400220031202142322434104143104244241214204444443323000244130122022422310201104411044030113302323014101331214303223312402430402404413033243132101010422240133122211400434023222214231402403403200012221023341333340042343122302113410210110221233241303024431330001303404020104442443120130000334110042432010203401440404010003442001223042211442001413004&quot;</span><br>    c1 = <span class="hljs-string">&quot;310020004234033304244200421414413320341301002123030311202340222410301423440312412440240244110200112141140201224032402232131204213012303204422003300004011434102141321223311243242010014140422411342304322201241112402132203101131221223004022003120002110230023341143201404311340311134230140231412201333333142402423134333211302102413111111424430032440123340034044314223400401224111323000242234420441240411021023100222003123214343030122032301042243&quot;</span><br>    n2 = <span class="hljs-string">&quot;302240000040421410144422133334143140011011044322223144412002220243001141141114123223331331304421113021231204322233120121444434210041232214144413244434424302311222143224402302432102242132244032010020113224011121043232143221203424243134044314022212024343100042342002432331144300214212414033414120004344211330224020301223033334324244031204240122301242232011303211220044222411134403012132420311110302442344021122101224411230002203344140143044114&quot;</span><br>    c2 = <span class="hljs-string">&quot;112200203404013430330214124004404423210041321043000303233141423344144222343401042200334033203124030011440014210112103234440312134032123400444344144233020130110134042102220302002413321102022414130443041144240310121020100310104334204234412411424420321211112232031121330310333414423433343322024400121200333330432223421433344122023012440013041401423202210124024431040013414313121123433424113113414422043330422002314144111134142044333404112240344&quot;</span><br>    n3 = <span class="hljs-string">&quot;332200324410041111434222123043121331442103233332422341041340412034230003314420311333101344231212130200312041044324431141033004333110021013020140020011222012300020041342040004002220210223122111314112124333211132230332124022423141214031303144444134403024420111423244424030030003340213032121303213343020401304243330001314023030121034113334404440421242240113103203013341231330004332040302440011324004130324034323430143102401440130242321424020323&quot;</span><br>    c3 = <span class="hljs-string">&quot;10013444120141130322433204124002242224332334011124210012440241402342100410331131441303242011002101323040403311120421304422222200324402244243322422444414043342130111111330022213203030324422101133032212042042243101434342203204121042113212104212423330331134311311114143200011240002111312122234340003403312040401043021433112031334324322123304112340014030132021432101130211241134422413442312013042141212003102211300321404043012124332013240431242&quot;</span><br>    <br></code></pre></td></tr></table></figure>
 
-<p>3.运行看看结果</p>
-<p><img src="/images/image-20230917203727593.png" srcset="/img/loading.gif" lazyload alt="image-20230917203727593"></p>
+
+<pre><code class="hljs">cList = [int(c1,5), int(c2,5), int(c3,5)]
+nList = [int(n1,5), int(n2,5), int(n3,5)]
+m_e = CRT(cList, nList) #计算m^e
+for e in range(1, 10):  #遍历e求解
+    m, f = gmpy2.iroot(m_e, e) #m_e开e次根
+    print(&quot;加密指数e = %d：&quot;%e)
+    m = hex(m)[2:]
+    if len(m)%2 == 1:
+        m = m + &#39;0&#39; #binascii.unhexlify()参数长度必须为偶数，因此做一下处理
+    flag = binascii.unhexlify(m)
+    print(flag)
+</code></pre>
+<p>3.运行得到答案</p>
+<p><img src="/images/image-20230920200558251.png" srcset="/img/loading.gif" lazyload alt="image-20230920200558251"></p>
 
                 
               </div>
@@ -341,8 +351,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2023/09/17/title：buuctf crypto 【[HDCTF2019]bbbbbbrsa】/</div>
+      <div>buuctf crypto RSA4</div>
+      <div>http://example.com/2023/09/20/buuctf-crypto-RSA4/</div>
     </div>
     <div class="license-meta">
       
@@ -354,7 +364,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月17日</div>
+          <div>2023年9月20日</div>
         </div>
       
       
@@ -386,9 +396,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/18/buuctf%20cry%20%E3%80%90%5BNCTF2019%5DKeyboard%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" title="">
+                      <a href="/2023/09/20/buuctf-crypto-%E5%A4%A9%E5%B9%B2%E5%9C%B0%E6%94%AF-%E7%94%B2%E5%AD%90/" title="buuctf crypto 天干地支+甲子">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">buuctf crypto 天干地支+甲子</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -396,7 +406,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/16/buuctf%20crypto%20%E3%80%90%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" title="">
+                      <a href="/2023/09/18/buuctf%20cry%20%E3%80%90%5BNCTF2019%5DKeyboard%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" title="">
                         <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
