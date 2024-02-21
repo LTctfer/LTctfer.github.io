@@ -255,15 +255,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/20/buuctf-crypto-%E5%A4%A9%E5%B9%B2%E5%9C%B0%E6%94%AF-%E7%94%B2%E5%AD%90/" target="_self">
-          buuctf crypto 天干地支+甲子
+        <a href="/2024/02/21/Crypto%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6%E8%AE%B0%E5%BD%95/" target="_self">
+          Crypto学习进度记录
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/20/buuctf-crypto-%E5%A4%A9%E5%B9%B2%E5%9C%B0%E6%94%AF-%E7%94%B2%E5%AD%90/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/21/Crypto%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6%E8%AE%B0%E5%BD%95/" target="_self">
         <div>
-          1.打开文件  2。对照六十甲子表ASCII换表一下，但是显然不对，那就是六十甲子对照表得到数据之后加60然后ASCII码转字符  3.得到flag：Goodjob
+          这篇帖子主要是用来记录最近的学习情况，应该会比较持续的更新 1.RSA算法学习最近入手了xenny✌的NSS工坊课程，开始比较系统的进行密码学的学习，最近也打了几个比赛（虽然实力不怎么样打不出来几道题），主要是讨论几个题目 SICTF——SuperRsa源代码： 123456789101112131415161718192021222324252627282930313233from Crypto
         </div>
       </a>
 
@@ -271,8 +271,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-20 20:08" pubdate>
-              2023-09-20
+            <time datetime="2024-02-21 23:01" pubdate>
+              2024-02-21
             </time>
           </div>
         
@@ -288,15 +288,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/20/buuctf-crypto-RSA4/" target="_self">
-          buuctf crypto RSA4
+        <a href="/2023/10/14/%E7%BD%91%E9%BC%8E%E6%9D%AF%E9%9D%92%E9%BE%99%E7%BB%84-boom/" target="_self">
+          网鼎杯青龙组 boom
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/20/buuctf-crypto-RSA4/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/14/%E7%BD%91%E9%BC%8E%E6%9D%AF%E9%9D%92%E9%BE%99%E7%BB%84-boom/" target="_self">
         <div>
-          1.打开文件，看到三组n和c  2.中国剩余定理，直接写脚本就行 1234567891011121314151617181920212223242526import gmpy2import  binascii#利用中国剩余定理求解同余方程，aList：余数，mList：模数def CRT(aList, mList):    M = 1    for i in mList:        M = M
+          1.本来是密码题，但是既然给了exe那就re试试，查壳什么的我就不在此赘述了，直接描述过程，三部分组成，一部分解MD5，一部分解三元一次方程组，最后一部分二元一次方程    2.最后的flag由这三部部分解出来的值按照给出的格式拼接而成  3.剩下的就是解方程，全部用在线网站就好啦，欸嘿就是这么简单
         </div>
       </a>
 
@@ -304,8 +304,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-20 20:01" pubdate>
-              2023-09-20
+            <time datetime="2023-10-14 20:42" pubdate>
+              2023-10-14
             </time>
           </div>
         
@@ -321,15 +321,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/18/buuctf%20cry%20%E3%80%90%5BNCTF2019%5DKeyboard%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
-          
+        <a href="/2023/10/14/ACTF2018-%E5%8F%AF%E6%80%9C%E7%9A%84rsa(%E7%A7%81%E9%92%A5%E6%9C%BA%E5%AF%86)/" target="_self">
+          ACTF2018 可怜的rsa
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/18/buuctf%20cry%20%E3%80%90%5BNCTF2019%5DKeyboard%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/14/ACTF2018-%E5%8F%AF%E6%80%9C%E7%9A%84rsa(%E7%A7%81%E9%92%A5%E6%9C%BA%E5%AF%86)/" target="_self">
         <div>
-          buuctf cry 【[NCTF2019]Keyboard】解题记录 1.打开文件  2.观察不难发现，所有字母都在同一排，o对应的是9，三个o大概对应九宫格的9的第三个字母 我直接对应一个个解密 flag{youaresosmartthatthisisjustapieceofcake}
+          1.打开文件可以看到公钥，直接使用在线网站得到n和e  2.yafu分解得到pq  3.使用私钥解密 123456789101112131415161718192021222324252627282930313233343536373839from Crypto.PublicKey import RSAimport gmpy2import base64from Crypto.Util.number
         </div>
       </a>
 
@@ -337,8 +337,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-18 20:25" pubdate>
-              2023-09-18
+            <time datetime="2023-10-14 20:31" pubdate>
+              2023-10-14
             </time>
           </div>
         
@@ -354,15 +354,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/17/title%EF%BC%9Abuuctf%20crypto%20%E3%80%90%5BHDCTF2019%5Dbbbbbbrsa%E3%80%91/" target="_self">
-          
+        <a href="/2023/10/14/ACTF2018-%E4%BD%A0%E8%83%BD%E7%9C%8B%E5%87%BA%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E5%AF%86%E7%A0%81%E7%A0%81/" target="_self">
+          ACTF2018 你能看出这是什么密码码
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/17/title%EF%BC%9Abuuctf%20crypto%20%E3%80%90%5BHDCTF2019%5Dbbbbbbrsa%E3%80%91/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/14/ACTF2018-%E4%BD%A0%E8%83%BD%E7%9C%8B%E5%87%BA%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E5%AF%86%E7%A0%81%E7%A0%81/" target="_self">
         <div>
-          buuctf crypto 【[HDCTF2019]bbbbbbrsa】 1.打开文件   2.注意一下，base32其实不是真的base32编码，只是一个名字，其实是base64编码，还有c是倒序的，写个脚本跑一下 12345678910111213from Crypto.Util.number import *import gmpy2p=1770773896752576950425079981
+          1.打开文件发现是经典的rsa加密，直接上脚本吧 123456789101112131415import binasciiimport gmpy2import binasciip=32968350940699980657930803613151404473574304024691423777313774889908862596593974505408563479347203657944730457
         </div>
       </a>
 
@@ -370,8 +370,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-17 21:46" pubdate>
-              2023-09-17
+            <time datetime="2023-10-14 20:17" pubdate>
+              2023-10-14
             </time>
           </div>
         
@@ -387,15 +387,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/16/buuctf%20crypto%20%E3%80%90%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
-          
+        <a href="/2023/10/14/buuctf-yxx/" target="_self">
+          buuctf yxx
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/16/buuctf%20crypto%20%E3%80%90%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/14/buuctf-yxx/" target="_self">
         <div>
-          buuctf crypto 【这是什么】解题记录 1.文件后缀名修改为txt并打开  2.JSfuck编码，解码一下（https://www.bugku.com/tools/jsfuck/#）  3.得到flag
+          1.打开文件很自然能想到异性相吸那道题目，一样的手法处理一下 12345678910a=&#x27;011011000110111101110110011001010110110001101111011101100110010101101100011011110111011001100101011011000110111101110110011001010110110001101111011101
         </div>
       </a>
 
@@ -403,8 +403,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-16 12:47" pubdate>
-              2023-09-16
+            <time datetime="2023-10-14 19:47" pubdate>
+              2023-10-14
             </time>
           </div>
         
@@ -420,15 +420,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/16/buuctf%20crypto%20%E3%80%90rot%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
-          
+        <a href="/2023/10/14/buuctf-%E5%BC%82%E6%80%A7%E7%9B%B8%E5%90%B8/" target="_self">
+          buuctf 异性相吸
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/16/buuctf%20crypto%20%E3%80%90rot%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/14/buuctf-%E5%BC%82%E6%80%A7%E7%9B%B8%E5%90%B8/" target="_self">
         <div>
-          buuctf crypto 【rot】解题记录1.打开文件，看到密文  2.rot常见的位移数是13，直接ASCII码减去13运行一下 12345678910a = [83,89,78,84,45,86,96,45,115,121,110,116,136,132,132,132,108,128,117,118,134,110,123,111,110,127,108,112,124,122,108,
+          1.打开文件后，没啥头绪，试试01editor，先把明文和密文转换成2进制异或一下 12345678910a = &#x27;01100001011100110110000101100100011100110110000101110011011001000110000101110011011001000110000101110011011001000110000101110011011001000
         </div>
       </a>
 
@@ -436,8 +436,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-16 09:41" pubdate>
-              2023-09-16
+            <time datetime="2023-10-14 19:32" pubdate>
+              2023-10-14
             </time>
           </div>
         
@@ -453,15 +453,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BMRCTF2020%5D%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E7%9F%A5%E5%A4%9A%E5%B0%91%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
-          
+        <a href="/2023/10/14/BJD2020-easyrsa/" target="_self">
+          BJD2020_easyrsa
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BMRCTF2020%5D%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E7%9F%A5%E5%A4%9A%E5%B0%91%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/14/BJD2020-easyrsa/" target="_self">
         <div>
-          buuctf crypto 【[MRCTF2020]古典密码知多少】解题记录1.打开文件，一张图片  2.查了别人的wp（https://blog.csdn.net/ao52426055/article/details/109304646），应该是标准银河字母+圣堂武士密码+猪圈密码，对照解出为：FGCPFLIRTUASYON 3.栅栏解密一下即可  4.flag为{CRYPTOFUN}
+          1.先打开文件，看到c、z、n、e4个数据，尝试分解n失败，选择找出z和pq的关系$$z &#x3D; p^2 + q^2$$那么则有$$p + q &#x3D; sqrt(z + 2 * n)$$ $$p - q &#x3D; sqrt(z - 2 * n)$$2.写脚本 1234567891011121314import gmpy2import binasciie=65537c=7922547
         </div>
       </a>
 
@@ -469,8 +469,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-15 10:05" pubdate>
-              2023-09-15
+            <time datetime="2023-10-14 19:09" pubdate>
+              2023-10-14
             </time>
           </div>
         
@@ -486,15 +486,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BWUSTCTF2020%5D%E4%BD%9B%E8%AF%B4%EF%BC%9A%E5%8F%AA%E8%83%BD%E5%9B%9B%E5%A4%A9%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
-          
+        <a href="/2023/10/14/buuctf-SameMod/" target="_self">
+          buuctf SameMod
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BWUSTCTF2020%5D%E4%BD%9B%E8%AF%B4%EF%BC%9A%E5%8F%AA%E8%83%BD%E5%9B%9B%E5%A4%A9%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/14/buuctf-SameMod/" target="_self">
         <div>
-          buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录1.打开文件  2.根据描述，先用新约佛论解密（http://hi.pcmoe.net/buddha.html）  3.感觉跟核心价值观有关系，试着解密一下（http://www.hiencode.com/cvencode.html）  4.根据提示，栅栏密码尝试解密，栏数为4时，看到另一个提示  5.凯撒密码（位移数
+          1.打开文件，发现为如图所示的几组数据  2.经过观察，感觉是共模攻击，上脚本 12345678910111213141516171819202122232425262728293031323334353637import gmpy2n =62665657207269072659972413583315854170957261463419897555380171229813607428134984
         </div>
       </a>
 
@@ -502,8 +502,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-15 09:49" pubdate>
-              2023-09-15
+            <time datetime="2023-10-14 18:53" pubdate>
+              2023-10-14
             </time>
           </div>
         
@@ -519,15 +519,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/14/%E8%87%AA%E5%B7%B1%E8%AF%95%E8%AF%95%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E6%8D%8F/" target="_self">
-          
+        <a href="/2023/10/10/buuctf-%E4%B8%80%E5%BC%A0%E7%A2%9F%E6%8A%A5/" target="_self">
+          buuctf 一张碟报
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/14/%E8%87%AA%E5%B7%B1%E8%AF%95%E8%AF%95%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E6%8D%8F/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/10/buuctf-%E4%B8%80%E5%BC%A0%E7%A2%9F%E6%8A%A5/" target="_self">
         <div>
-          自己试试怎么显示图片捏
+          1.文件打开是两部分文章，根本没思路  2.查询过后得知为脑洞题，两段文章存在一一对应关系，最后的作业解出即可 12345678910111213141516171819txt1 = &quot;今天上午，朝歌区梆子公司决定，在每天三更天不亮免费在各大小区门口设卡为全城提供二次震耳欲聋的敲更提醒，呼吁大家早睡早起，不要因为贪睡断送大好人生，时代的符号是前进。为此，全区老人都蹲在该公司东边树丛合力抵
         </div>
       </a>
 
@@ -535,8 +535,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-14 11:50" pubdate>
-              2023-09-14
+            <time datetime="2023-10-10 22:34" pubdate>
+              2023-10-10
             </time>
           </div>
         
@@ -552,15 +552,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2023/09/14/hello-world/" target="_self">
-          Hello World
+        <a href="/2023/10/10/ACTF2020-CRYPTO-rsa3/" target="_self">
+          ACTF2020 CRYPTO-rsa3
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/09/14/hello-world/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/10/10/ACTF2020-CRYPTO-rsa3/" target="_self">
         <div>
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick
+          1.打开文件，分析文件后，输出的两个数就是n和c  2.使用在线网站分解n得到pq（不知道为什么yafu不行），接下来按正常思路编写脚本就好 123456789101112131415161718192021import gmpy2import binasciin = 17760650483649924697095903022687160888596932177821105108052463408
         </div>
       </a>
 
@@ -568,8 +568,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2023-09-14 11:14" pubdate>
-              2023-09-14
+            <time datetime="2023-10-10 22:18" pubdate>
+              2023-10-10
             </time>
           </div>
         
@@ -583,7 +583,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

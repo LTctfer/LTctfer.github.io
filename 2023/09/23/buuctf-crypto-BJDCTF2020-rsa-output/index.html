@@ -16,25 +16,26 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="自己试试怎么显示图片捏">
+    <meta name="description" content="1.打开文件  2.发现两组message（即为c），观察花括号内的数字（即为n），完全一致，推测为共模攻击，写出共模攻击脚本 123456789101112131415161718192021222324252627282930313233import gmpy2import libnumn&#x3D;2105833933735428784753410754461360530501544109050892">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2023/09/14/%E8%87%AA%E5%B7%B1%E8%AF%95%E8%AF%95%E6%80%8E%E4%B9%88%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E6%8D%8F/index.html">
+<meta property="og:title" content="buuctf crypto [BJDCTF2020]rsa_output">
+<meta property="og:url" content="http://example.com/2023/09/23/buuctf-crypto-BJDCTF2020-rsa-output/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="自己试试怎么显示图片捏">
+<meta property="og:description" content="1.打开文件  2.发现两组message（即为c），观察花括号内的数字（即为n），完全一致，推测为共模攻击，写出共模攻击脚本 123456789101112131415161718192021222324252627282930313233import gmpy2import libnumn&#x3D;2105833933735428784753410754461360530501544109050892">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/image-20230914115421460.png">
-<meta property="article:published_time" content="2023-09-14T03:50:33.527Z">
-<meta property="article:modified_time" content="2023-09-14T03:54:55.396Z">
+<meta property="og:image" content="http://example.com/images/image-20230923200134680.png">
+<meta property="og:image" content="http://example.com/images/image-20230923201129374.png">
+<meta property="article:published_time" content="2023-09-23T12:00:18.000Z">
+<meta property="article:modified_time" content="2023-09-23T12:35:11.044Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/image-20230914115421460.png">
+<meta name="twitter:image" content="http://example.com/images/image-20230923200134680.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hexo</title>
+  <title>buuctf crypto [BJDCTF2020]rsa_output - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -229,7 +230,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="buuctf crypto [BJDCTF2020]rsa_output"></span>
           
         </div>
 
@@ -240,8 +241,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-14 11:50" pubdate>
-          2023年9月14日 中午
+        <time datetime="2023-09-23 20:00" pubdate>
+          2023年9月23日 晚上
         </time>
       </span>
     
@@ -252,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          11 字
+          3k 字
         
       </span>
     
@@ -263,7 +264,7 @@
         
         
         
-          1 分钟
+          26 分钟
         
       </span>
     
@@ -308,13 +309,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">buuctf crypto [BJDCTF2020]rsa_output</h1>
             
             
               <div class="markdown-body">
                 
-                <p>自己试试怎么显示图片捏</p>
-<p><img src="/images/image-20230914115421460.png" srcset="/img/loading.gif" lazyload alt="image-20230914115421460"></p>
+                <p>1.打开文件</p>
+<p><img src="/images/image-20230923200134680.png" srcset="/img/loading.gif" lazyload alt="image-20230923200134680"></p>
+<p>2.发现两组message（即为c），观察花括号内的数字（即为n），完全一致，推测为共模攻击，写出共模攻击脚本</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs routeros">import gmpy2<br>import libnum<br><br><span class="hljs-attribute">n</span>=21058339337354287847534107544613605305015441090508924094198816691219103399526800112802416383088995253908857460266726925615826895303377801614829364034624475195859997943146305588315939130777450485196290766249612340054354622516207681542973756257677388091926549655162490873849955783768663029138647079874278240867932127196686258800146911620730706734103611833179733264096475286491988063990431085380499075005629807702406676707841324660971173253100956362528346684752959937473852630145893796056675793646430793578265418255919376323796044588559726703858429311784705245069845938316802681575653653770883615525735690306674635167111<br><span class="hljs-attribute">e1</span>=2767<br><span class="hljs-attribute">c1</span>=20152490165522401747723193966902181151098731763998057421967155300933719378216342043730801302534978403741086887969040721959533190058342762057359432663717825826365444996915469039056428416166173920958243044831404924113442512617599426876141184212121677500371236937127571802891321706587610393639446868836987170301813018218408886968263882123084155607494076330256934285171370758586535415136162861138898728910585138378884530819857478609791126971308624318454905992919405355751492789110009313138417265126117273710813843923143381276204802515910527468883224274829962479636527422350190210717694762908096944600267033351813929448599<br><span class="hljs-attribute">n2</span>=21058339337354287847534107544613605305015441090508924094198816691219103399526800112802416383088995253908857460266726925615826895303377801614829364034624475195859997943146305588315939130777450485196290766249612340054354622516207681542973756257677388091926549655162490873849955783768663029138647079874278240867932127196686258800146911620730706734103611833179733264096475286491988063990431085380499075005629807702406676707841324660971173253100956362528346684752959937473852630145893796056675793646430793578265418255919376323796044588559726703858429311784705245069845938316802681575653653770883615525735690306674635167111<br><span class="hljs-attribute">e2</span>=3659<br><span class="hljs-attribute">c2</span>=11298697323140988812057735324285908480504721454145796535014418738959035245600679947297874517818928181509081545027056523790022598233918011261011973196386395689371526774785582326121959186195586069851592467637819366624044133661016373360885158956955263645614345881350494012328275215821306955212788282617812686548883151066866149060363482958708364726982908798340182288702101023393839781427386537230459436512613047311585875068008210818996941460156589314135010438362447522428206884944952639826677247819066812706835773107059567082822312300721049827013660418610265189288840247186598145741724084351633508492707755206886202876227<br><br><br><span class="hljs-comment">#共模攻击</span><br><span class="hljs-comment">#共模攻击函数</span><br>def rsa_gong_N_def(e1,e2,c1,c2,n):<br>    e1, e2, c1, c2, <span class="hljs-attribute">n</span>=int(e1),int(e2),int(c1),int(c2),int(n)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;e1,e2:&quot;</span>,e1,e2)<br>    <span class="hljs-built_in">print</span>(gmpy2.gcd(e1,e2))<br>    s = gmpy2.gcdext(e1, e2)<br>    <span class="hljs-built_in">print</span>(s)<br>    s1 = s[1]<br>    s2 = s[2]<br>    <span class="hljs-keyword">if</span> s1 &lt; 0:<br>        s1 = - s1<br>        c1 = gmpy2.invert(c1, n)<br>    elif s2 &lt; 0:<br>        s2 = - s2<br>        c2 = gmpy2.invert(c2, n)<br>    m = (pow(c1,s1,n) * pow(c2 ,s2 ,n)) % n<br>    return int(m)<br><br>m = rsa_gong_N_def(e1,e2,c1,c2,n)<br><span class="hljs-built_in">print</span>(m)<br><span class="hljs-built_in">print</span>(libnum.n2s(int(m)).decode())<br></code></pre></td></tr></table></figure>
+
+<p>3.运行得到flag</p>
+<p><img src="/images/image-20230923201129374.png" srcset="/img/loading.gif" lazyload alt="image-20230923201129374"></p>
 
                 
               </div>
@@ -332,8 +338,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2023/09/14/自己试试怎么显示图片捏/</div>
+      <div>buuctf crypto [BJDCTF2020]rsa_output</div>
+      <div>http://example.com/2023/09/23/buuctf-crypto-BJDCTF2020-rsa-output/</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +351,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月14日</div>
+          <div>2023年9月23日</div>
         </div>
       
       
@@ -377,9 +383,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BWUSTCTF2020%5D%E4%BD%9B%E8%AF%B4%EF%BC%9A%E5%8F%AA%E8%83%BD%E5%9B%9B%E5%A4%A9%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" title="">
+                      <a href="/2023/09/23/buuctf-crypto-BJDCTF2020-signin/" title="buuctf crypto [BJDCTF2020]signin">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">buuctf crypto [BJDCTF2020]signin</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -387,8 +393,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/14/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/09/22/buuctf-crypto-%E4%BC%A0%E6%84%9F%E5%99%A8/" title="buuctf crypto 传感器">
+                        <span class="hidden-mobile">buuctf crypto 传感器</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

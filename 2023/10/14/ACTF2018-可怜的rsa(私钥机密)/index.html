@@ -16,30 +16,26 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录1.打开文件  2.根据描述，先用新约佛论解密（http:&#x2F;&#x2F;hi.pcmoe.net&#x2F;buddha.html）  3.感觉跟核心价值观有关系，试着解密一下（http:&#x2F;&#x2F;www.hiencode.com&#x2F;cvencode.html）  4.根据提示，栅栏密码尝试解密，栏数为4时，看到另一个提示  5.凯撒密码（位移数">
+    <meta name="description" content="1.打开文件可以看到公钥，直接使用在线网站得到n和e  2.yafu分解得到pq  3.使用私钥解密 123456789101112131415161718192021222324252627282930313233343536373839from Crypto.PublicKey import RSAimport gmpy2import base64from Crypto.Util.number">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2023/09/15/buuctf%20crypto%20%E3%80%90[WUSTCTF2020]%E4%BD%9B%E8%AF%B4%EF%BC%9A%E5%8F%AA%E8%83%BD%E5%9B%9B%E5%A4%A9%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:title" content="ACTF2018 可怜的rsa">
+<meta property="og:url" content="http://example.com/2023/10/14/ACTF2018-%E5%8F%AF%E6%80%9C%E7%9A%84rsa(%E7%A7%81%E9%92%A5%E6%9C%BA%E5%AF%86)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录1.打开文件  2.根据描述，先用新约佛论解密（http:&#x2F;&#x2F;hi.pcmoe.net&#x2F;buddha.html）  3.感觉跟核心价值观有关系，试着解密一下（http:&#x2F;&#x2F;www.hiencode.com&#x2F;cvencode.html）  4.根据提示，栅栏密码尝试解密，栏数为4时，看到另一个提示  5.凯撒密码（位移数">
+<meta property="og:description" content="1.打开文件可以看到公钥，直接使用在线网站得到n和e  2.yafu分解得到pq  3.使用私钥解密 123456789101112131415161718192021222324252627282930313233343536373839from Crypto.PublicKey import RSAimport gmpy2import base64from Crypto.Util.number">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/image-20230915093151040.png">
-<meta property="og:image" content="http://example.com/images/image-20230915093428986.png">
-<meta property="og:image" content="http://example.com/images/image-20230915093640179.png">
-<meta property="og:image" content="http://example.com/images/image-20230915094323822.png">
-<meta property="og:image" content="http://example.com/images/image-20230915094609885.png">
-<meta property="og:image" content="http://example.com/images/image-20230915094831209.png">
-<meta property="article:published_time" content="2023-09-15T01:49:48.108Z">
-<meta property="article:modified_time" content="2023-09-15T01:49:48.108Z">
+<meta property="og:image" content="http://example.com/images/image-20231014203240844.png">
+<meta property="og:image" content="http://example.com/images/image-20231014203409108.png">
+<meta property="article:published_time" content="2023-10-14T12:31:01.000Z">
+<meta property="article:modified_time" content="2023-10-14T12:35:06.707Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/image-20230915093151040.png">
+<meta name="twitter:image" content="http://example.com/images/image-20231014203240844.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hexo</title>
+  <title>ACTF2018 可怜的rsa - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -234,7 +230,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="ACTF2018 可怜的rsa"></span>
           
         </div>
 
@@ -245,8 +241,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-15 09:49" pubdate>
-          2023年9月15日 上午
+        <time datetime="2023-10-14 20:31" pubdate>
+          2023年10月14日 晚上
         </time>
       </span>
     
@@ -257,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          276 字
+          2.1k 字
         
       </span>
     
@@ -268,7 +264,7 @@
         
         
         
-          3 分钟
+          18 分钟
         
       </span>
     
@@ -313,24 +309,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">ACTF2018 可怜的rsa</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="buuctf-crypto-【-WUSTCTF2020-佛说：只能四天】解题记录"><a href="#buuctf-crypto-【-WUSTCTF2020-佛说：只能四天】解题记录" class="headerlink" title="buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录"></a>buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录</h3><p>1.打开文件</p>
-<p><img src="/images/image-20230915093151040.png" srcset="/img/loading.gif" lazyload alt="image-20230915093151040"></p>
-<p>2.根据描述，先用新约佛论解密（<a target="_blank" rel="noopener" href="http://hi.pcmoe.net/buddha.html%EF%BC%89">http://hi.pcmoe.net/buddha.html）</a></p>
-<p><img src="/images/image-20230915093428986.png" srcset="/img/loading.gif" lazyload alt="image-20230915093428986"></p>
-<p>3.感觉跟核心价值观有关系，试着解密一下（<a target="_blank" rel="noopener" href="http://www.hiencode.com/cvencode.html%EF%BC%89">http://www.hiencode.com/cvencode.html）</a></p>
-<p><img src="/images/image-20230915093640179.png" srcset="/img/loading.gif" lazyload alt="image-20230915093640179"></p>
-<p>4.根据提示，栅栏密码尝试解密，栏数为4时，看到另一个提示</p>
-<p><img src="/images/image-20230915094323822.png" srcset="/img/loading.gif" lazyload alt="image-20230915094323822"></p>
-<p>5.凯撒密码（位移数为3时叫做凯撒）解密一下</p>
-<p><img src="/images/image-20230915094609885.png" srcset="/img/loading.gif" lazyload alt="image-20230915094609885"></p>
-<p>6.提示说凯撒不是最后一步，猜测是base，尝试一下（<a target="_blank" rel="noopener" href="https://www.qqxiuzi.cn/bianma/base.php%EF%BC%89">https://www.qqxiuzi.cn/bianma/base.php）</a></p>
-<p><img src="/images/image-20230915094831209.png" srcset="/img/loading.gif" lazyload alt="image-20230915094831209"></p>
-<p>7.得到flag</p>
+                <p>1.打开文件可以看到公钥，直接使用在线网站得到n和e</p>
+<p><img src="/images/image-20231014203240844.png" srcset="/img/loading.gif" lazyload alt="image-20231014203240844"></p>
+<p>2.yafu分解得到pq</p>
+<p><img src="/images/image-20231014203409108.png" srcset="/img/loading.gif" lazyload alt="image-20231014203409108"></p>
+<p>3.使用私钥解密</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs makefile">from Crypto.PublicKey import RSA<br><br>import gmpy2<br><br>import base64<br><br>from Crypto.Util.number import *<br><br>from Crypto.Cipher import PKCS1_OAEP<br><br> <br><br>e = 65537<br><br>n = 79832181757332818552764610761349592984614744432279135328398999801627880283610900361281249973175805069916210179560506497075132524902086881120372213626641879468491936860976686933630869673826972619938321951599146744807653301076026577949579618331502776303983485566046485431039541708467141408260220098592761245010678592347501894176269580510459729633673468068467144199744563731826362102608811033400887813754780282628099443490170016087838606998017490456601315802448567772411623826281747245660954245413781519794295336197555688543537992197142258053220453757666537840276416475602759374950715283890232230741542737319569819793988431443<br><br>p =3133337<br><br>q=25478326064937419292200172136399497719081842914528228316455906211693118321971399936004729134841162974144246271486439695786036588117424611881955950996219646807378822278285638261582099108339438949573034101215141156156408742843820048066830863814362379885720395082318462850002901605689761876319151147352730090957556940842144299887394678743607766937828094478336401159449035878306853716216548374273462386508307367713112073004011383418967894930554067582453248981022011922883374442736848045920676341361871231787163441467533076890081721882179369168787287724769642665399992556052144845878600126283968890273067575342061776244939<br><br>phi = (p-1)*(q-1)<br><br>d = gmpy2.invert(e,phi)<br><br>text = &#x27;GVd1d3viIXFfcHapEYuo5fAvIiUS83adrtMW/MgPwxVBSl46joFCQ1plcnlDGfL19K/3PvChV6n5QGohzfVyz2Z5GdTlaknxvHDUGf5HCukokyPwK/1EYU7NzrhGE7J5jPdi0Aj7xi/Odxy0hGMgpaBLd/nL3N8O6i9pc4Gg3O8soOlciBG/6/xdfN3SzSStMYIN8nfZZMSq3xDDvz4YB7TcTBh4ik4wYhuC77gmT+HWOv5gLTNQ3EkZs5N3EAopy11zHNYU80yv1jtFGcluNPyXYttU5qU33jcp0Wuznac+t+AZHeSQy5vk8DyWorSGMiS+J4KNqSVlDs12EqXEqqJ0uA==&#x27;<br><br>c_bytes =base64.b64decode(text)<br><br>rsa_components=(n,e,int(d),p,q)<br><br>arsa=RSA.construct(rsa_components)<br><br>rsakey = RSA.importKey(arsa.exportKey())<br><br>rsakey = PKCS1_OAEP.new(rsakey)<br><br>decrypted = rsakey.decrypt(c_bytes)<br><br>print(decrypted)<br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -348,8 +338,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2023/09/15/buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录/</div>
+      <div>ACTF2018 可怜的rsa</div>
+      <div>http://example.com/2023/10/14/ACTF2018-可怜的rsa(私钥机密)/</div>
     </div>
     <div class="license-meta">
       
@@ -361,7 +351,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月15日</div>
+          <div>2023年10月14日</div>
         </div>
       
       
@@ -393,9 +383,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BMRCTF2020%5D%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E7%9F%A5%E5%A4%9A%E5%B0%91%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" title="">
+                      <a href="/2023/10/14/%E7%BD%91%E9%BC%8E%E6%9D%AF%E9%9D%92%E9%BE%99%E7%BB%84-boom/" title="网鼎杯青龙组 boom">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">网鼎杯青龙组 boom</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -403,8 +393,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/14/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/10/14/ACTF2018-%E4%BD%A0%E8%83%BD%E7%9C%8B%E5%87%BA%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E5%AF%86%E7%A0%81%E7%A0%81/" title="ACTF2018 你能看出这是什么密码码">
+                        <span class="hidden-mobile">ACTF2018 你能看出这是什么密码码</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,30 +16,23 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录1.打开文件  2.根据描述，先用新约佛论解密（http:&#x2F;&#x2F;hi.pcmoe.net&#x2F;buddha.html）  3.感觉跟核心价值观有关系，试着解密一下（http:&#x2F;&#x2F;www.hiencode.com&#x2F;cvencode.html）  4.根据提示，栅栏密码尝试解密，栏数为4时，看到另一个提示  5.凯撒密码（位移数">
+    <meta name="description" content="1.这道题比较简单，打开之后是n，e，c三个数，分解一下，然后脚本解一下 12345678910111213import gmpy2 import binasciic &#x3D; 28767758880940662779934612526152562406674613203406706867456395986985664083182e &#x3D;  65537p &#x3D; 18923986151112514321253">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2023/09/15/buuctf%20crypto%20%E3%80%90[WUSTCTF2020]%E4%BD%9B%E8%AF%B4%EF%BC%9A%E5%8F%AA%E8%83%BD%E5%9B%9B%E5%A4%A9%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:title" content="buuctf crypto [WUSTCTF2020]babyrsa">
+<meta property="og:url" content="http://example.com/2023/09/24/buuctf-crypto-WUSTCTF2020-babyrsa/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录1.打开文件  2.根据描述，先用新约佛论解密（http:&#x2F;&#x2F;hi.pcmoe.net&#x2F;buddha.html）  3.感觉跟核心价值观有关系，试着解密一下（http:&#x2F;&#x2F;www.hiencode.com&#x2F;cvencode.html）  4.根据提示，栅栏密码尝试解密，栏数为4时，看到另一个提示  5.凯撒密码（位移数">
+<meta property="og:description" content="1.这道题比较简单，打开之后是n，e，c三个数，分解一下，然后脚本解一下 12345678910111213import gmpy2 import binasciic &#x3D; 28767758880940662779934612526152562406674613203406706867456395986985664083182e &#x3D;  65537p &#x3D; 18923986151112514321253">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/image-20230915093151040.png">
-<meta property="og:image" content="http://example.com/images/image-20230915093428986.png">
-<meta property="og:image" content="http://example.com/images/image-20230915093640179.png">
-<meta property="og:image" content="http://example.com/images/image-20230915094323822.png">
-<meta property="og:image" content="http://example.com/images/image-20230915094609885.png">
-<meta property="og:image" content="http://example.com/images/image-20230915094831209.png">
-<meta property="article:published_time" content="2023-09-15T01:49:48.108Z">
-<meta property="article:modified_time" content="2023-09-15T01:49:48.108Z">
+<meta property="article:published_time" content="2023-09-24T15:04:14.000Z">
+<meta property="article:modified_time" content="2023-09-24T15:07:22.377Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/image-20230915093151040.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Hexo</title>
+  <title>buuctf crypto [WUSTCTF2020]babyrsa - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -234,7 +227,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="buuctf crypto [WUSTCTF2020]babyrsa"></span>
           
         </div>
 
@@ -245,8 +238,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-15 09:49" pubdate>
-          2023年9月15日 上午
+        <time datetime="2023-09-24 23:04" pubdate>
+          2023年9月24日 晚上
         </time>
       </span>
     
@@ -257,7 +250,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          276 字
+          333 字
         
       </span>
     
@@ -313,24 +306,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">buuctf crypto [WUSTCTF2020]babyrsa</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="buuctf-crypto-【-WUSTCTF2020-佛说：只能四天】解题记录"><a href="#buuctf-crypto-【-WUSTCTF2020-佛说：只能四天】解题记录" class="headerlink" title="buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录"></a>buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录</h3><p>1.打开文件</p>
-<p><img src="/images/image-20230915093151040.png" srcset="/img/loading.gif" lazyload alt="image-20230915093151040"></p>
-<p>2.根据描述，先用新约佛论解密（<a target="_blank" rel="noopener" href="http://hi.pcmoe.net/buddha.html%EF%BC%89">http://hi.pcmoe.net/buddha.html）</a></p>
-<p><img src="/images/image-20230915093428986.png" srcset="/img/loading.gif" lazyload alt="image-20230915093428986"></p>
-<p>3.感觉跟核心价值观有关系，试着解密一下（<a target="_blank" rel="noopener" href="http://www.hiencode.com/cvencode.html%EF%BC%89">http://www.hiencode.com/cvencode.html）</a></p>
-<p><img src="/images/image-20230915093640179.png" srcset="/img/loading.gif" lazyload alt="image-20230915093640179"></p>
-<p>4.根据提示，栅栏密码尝试解密，栏数为4时，看到另一个提示</p>
-<p><img src="/images/image-20230915094323822.png" srcset="/img/loading.gif" lazyload alt="image-20230915094323822"></p>
-<p>5.凯撒密码（位移数为3时叫做凯撒）解密一下</p>
-<p><img src="/images/image-20230915094609885.png" srcset="/img/loading.gif" lazyload alt="image-20230915094609885"></p>
-<p>6.提示说凯撒不是最后一步，猜测是base，尝试一下（<a target="_blank" rel="noopener" href="https://www.qqxiuzi.cn/bianma/base.php%EF%BC%89">https://www.qqxiuzi.cn/bianma/base.php）</a></p>
-<p><img src="/images/image-20230915094831209.png" srcset="/img/loading.gif" lazyload alt="image-20230915094831209"></p>
-<p>7.得到flag</p>
+                <p>1.这道题比较简单，打开之后是n，e，c三个数，分解一下，然后脚本解一下</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs makefile">import gmpy2 <br>import binascii<br><br>c = 28767758880940662779934612526152562406674613203406706867456395986985664083182<br>e =  65537<br>p = 189239861511125143212536989589123569301<br>q =  386123125371923651191219869811293586459<br><br>phi = (p-1)*(q-1)<br>d = gmpy2.invert(e, phi)<br><br>m = gmpy2.powmod(c,d,p*q)<br>print(hex(m))<br></code></pre></td></tr></table></figure>
+
+<p>2.16进制转一下得到flag</p>
 
                 
               </div>
@@ -348,8 +332,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2023/09/15/buuctf crypto 【[WUSTCTF2020]佛说：只能四天】解题记录/</div>
+      <div>buuctf crypto [WUSTCTF2020]babyrsa</div>
+      <div>http://example.com/2023/09/24/buuctf-crypto-WUSTCTF2020-babyrsa/</div>
     </div>
     <div class="license-meta">
       
@@ -361,7 +345,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月15日</div>
+          <div>2023年9月24日</div>
         </div>
       
       
@@ -393,9 +377,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/15/buuctf%20crypto%20%E3%80%90%5BMRCTF2020%5D%E5%8F%A4%E5%85%B8%E5%AF%86%E7%A0%81%E7%9F%A5%E5%A4%9A%E5%B0%91%E3%80%91%E8%A7%A3%E9%A2%98%E8%AE%B0%E5%BD%95/" title="">
+                      <a href="/2023/09/24/buuctf-crypto-MRCTF2020-keyboard/" title="buuctf crypto [MRCTF2020]keyboard">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">buuctf crypto [MRCTF2020]keyboard</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -403,8 +387,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/14/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2023/09/23/buuctf-crypto-BJDCTF2020-signin/" title="buuctf crypto [BJDCTF2020]signin">
+                        <span class="hidden-mobile">buuctf crypto [BJDCTF2020]signin</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
